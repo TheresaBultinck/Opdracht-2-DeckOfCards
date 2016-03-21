@@ -1,5 +1,6 @@
 package algorithms;
-
+//commentaar toevoegen bij elke methode
+//zodat voor de buitenstaanders duidelijk wordt wat er in de methode plaatsvindt
 public class DoubleEndedQueue<T> {
 
     private LinkedNode<T> head;
@@ -10,6 +11,11 @@ public class DoubleEndedQueue<T> {
         head = null;
         tail = null;
     }
+    
+    /**
+     * Adds an element to the front of the linked list. 
+     * @param node
+     */
 
     public void addElementToFront(T node) {
         LinkedNode<T> newNode = new LinkedNode<T>(node);
@@ -23,6 +29,11 @@ public class DoubleEndedQueue<T> {
         }
         size++;
     }
+    
+    /**
+     * Adds an element to the back of the linked list. 
+     * @param node
+     */
 
     public void addElementToBack(T node) {
         LinkedNode<T> newNode = new LinkedNode<T>(node);
@@ -36,6 +47,10 @@ public class DoubleEndedQueue<T> {
         }
         size++;
     }
+    
+    /**
+     * Removes an element at the back of the linked list. 
+     */
 
     public void removeBack() {
         if (!isEmpty()) {
@@ -54,6 +69,10 @@ public class DoubleEndedQueue<T> {
         head = null;
         tail = null;
     }
+    
+    /**
+     * Removes an element at the front of the linked list. 
+     */
 
     public void removeFront() {
         if (!isEmpty()) {
@@ -66,6 +85,11 @@ public class DoubleEndedQueue<T> {
             size--;
         }
     }
+    
+    /**
+     * Returns the head of the linked list if there is a head. 
+     * @return head 
+     */
 
     public T getHead() {
         if (head != null) {
