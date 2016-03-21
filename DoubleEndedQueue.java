@@ -115,6 +115,10 @@ public class DoubleEndedQueue<T> {
     public boolean isEmpty() {
         return ((head == null) && (tail == null));
     }
+    
+    /**
+     * Prints the linked list/queue.
+     */
 
     public void printList() {
         if (head != null) {
